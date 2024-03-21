@@ -19,7 +19,7 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 ```
     branch name to create: feature/aws-cloudformation-implementation-v1
 
-    Information to agent: Do as the steps below are defined one by one. You are working in azure repo so make sure to use tools related to azure repo.
+    Information to agent: Do as the steps below are defined one by one. You are working in github repo so make sure to use tools related to github repo.
     NOTE: You should write the actual implementation of code not just comments.
 
     SCENARIO: You are working in a project in aws where it requires api gateway, sqs, lambda, dynamodb, rds and s3. The process looks like this: 
@@ -39,7 +39,7 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 
     step 3: Using GithubCreateNewFile tool, Create a new file called README.md inside cloudformation-sample-v1 directory and add the description of the cloudformation template created in the above step.
 
-    step 6: Using GithubCreatePullRequest tool, create a new Pull Request from the above created branch with title "CloudFormation Sample V1 Added".
+    step 4: Using GithubCreatePullRequest tool, create a new Pull Request from the above created branch with title "CloudFormation Sample V1 Added".
 
 ```
 
@@ -67,16 +67,16 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 
     step 3: using AzureDevopsRepositoryCreateNewFile tool, Create a new file called README.md inside cloudformation-sample-v1 directory and add the description of the cloudformation template created in the above step.
 
-    step 6: using AzureDevopsPullRequestsCreatePullRequest tool, create a new Pull Request from the above created branch with title "CloudFormation Sample V1 Added".
+    step 4: using AzureDevopsPullRequestsCreatePullRequest tool, create a new Pull Request from the above created branch with title "CloudFormation Sample V1 Added".
 
-    step 7: using AzureDevopsIssuesUpdateIssue tool, update the issue status to done.
+    step 5: using AzureDevopsIssuesUpdateIssue tool, update the issue status to done.
 ```
 
 ### SAMPLE PROMPT - Jira / Bitbucket (Making Project That hits API requests extract data and define serverless file)
 ```
     branch name to create: feature/aws-cloudformation-implementation-v1
 
-    Information to agent: Do as the steps below are defined one by one. You are working in azure repo so make sure to use tools related to azure repo.
+    Information to agent: Do as the steps below are defined one by one. You are working in bitbucket repo so make sure to use tools related to bitbucket repo.
     NOTE: You should write the actual implementation of code not just comments. 
 
     SCENARIO: You are working in a project in aws where it requires api gateway, sqs, lambda, dynamodb, rds and s3. The process looks like this: 
@@ -96,9 +96,9 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 
     step 3: Using BitBucketWriteCode tool, Create a new file called README.md inside cloudformation-sample-v1 directory and add the description of the cloudformation template created in the above step.
 
-    step 6: Using BitBucketCreateNewPullRequest tool, create a new Pull Request from the above created branch with title "CloudFormation Sample V1 Added".
+    step 4: Using BitBucketCreateNewPullRequest tool, create a new Pull Request from the above created branch with title "CloudFormation Sample V1 Added".
 
-    step 7: Update this jira issue status to done.
+    step 5: Update this jira issue status to done.
 
 ```
 
