@@ -1,0 +1,40 @@
+Resources:
+  ApiGateway:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: ExampleAPI
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: arn:aws:iam::123456789012:role/execution_role
+      Code:
+        S3Bucket: lambda-functions
+        S3Key: lambda.zip
+      Runtime: nodejs12.x
+  SQSQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: ExampleQueue
+  DynamoDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ExampleTable
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+  RDSDatabase:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: ExampleDB
+      Engine: mysql
+      DBInstanceClass: db.t2.micro
+      AllocatedStorage: 20
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: example-bucket
