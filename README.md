@@ -17,6 +17,10 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 
 ### SAMPLE PROMPT - Github Tools (Making Cloudformation Template)
 ```
+    platform: github
+
+    repository-to-work-on: kodey-cloudformation-sample
+
     branch name to create: feature/aws-cloudformation-implementation-v1
 
     Information to agent: Do as the steps below are defined one by one. You are working in github repo so make sure to use tools related to github repo.
@@ -45,6 +49,10 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 
 ### SAMPLE PROMPT - Azure DevOps Tools (Cloudformation Template)
 ```
+    platform: azure
+
+    repository-to-work-on: kodey-cloudformation-sample
+    
     branch name to create: feature/aws-cloudformation-implementation-v1
 
     Information to agent: Do as the steps below are defined one by one. You are working in azure repo so make sure to use tools related to azure repo.
@@ -74,6 +82,10 @@ In this sample, we will explore how Kodey.ai can create cloudformation templates
 
 ### SAMPLE PROMPT - Jira / Bitbucket (Making Project That hits API requests extract data and define serverless file)
 ```
+    platform: bitbucket
+
+    repository-to-work-on: kodey-cloudformation-sample
+    
     branch name to create: feature/aws-cloudformation-implementation-v1
 
     Information to agent: Do as the steps below are defined one by one. You are working in bitbucket repo so make sure to use tools related to bitbucket repo.
